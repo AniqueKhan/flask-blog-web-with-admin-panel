@@ -1,0 +1,5 @@
+{% extends "base.html" %} {% block title %}{{tag.title}}{%endblock %}{% block
+content %}
+<h1 style="text-align: center">Posts With "{{tag.title}}" Tag</h1>
+{% for post in tag.posts %} {% include "posts/includes/card.html" %} {% endfor
+%}{% endblock %}

@@ -1,0 +1,10 @@
+.login-panel {
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+}
+.body {
+  background-color: aqua;
+}
