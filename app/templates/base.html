@@ -110,9 +110,11 @@
         >Logout</a
       >
       {% else %}
+      <a class="btn btn-outline-primary" href="/sign-up">Sign Up</a>
       <a class="btn btn-outline-primary" href="{{ url_for('security.login') }}"
         >Login</a
       >
+
       {% endif %}
     </div>
     <script

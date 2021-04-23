@@ -33,6 +33,7 @@ def posts_list():
     query = request.args.get("query")
     if query:
         posts = Post.query.filter(Post.title.contains(query) | Post.body.contains(query))
+
     else:    
         posts = Post.query.order_by(Post.created.desc())
 

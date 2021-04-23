@@ -38,16 +38,22 @@ class BaseModelView(ModelView):
         if is_created:
             model.generate_slug()
         return super().on_model_change(form,model,is_created)
+class UserRoleAdminView(ModelView):
+    pass
 
 class PostAdminView(AdminMixin,BaseModelView):
     pass
 class TagAdminView(AdminMixin,BaseModelView):
     pass
-
+class UserAdminView(AdminMixin,UserRoleAdminView):
+    pass
+class RoleAdminView(AdminMixin,UserRoleAdminView):
+    pass
 admin = Admin(app,"FlaskApp",url="/",index_view=HomeAdminView(name="Home"))
 admin.add_view(PostAdminView(Post,db.session))
 admin.add_view(TagAdminView(Tag,db.session))
-
+admin.add_view(UserAdminView(User,db.session))
+admin.add_view(RoleAdminView(Role,db.session))
 # Flask Security
 user_datastore = SQLAlchemyUserDatastore(db,User,Role)
 security = Security(app,user_datastore)

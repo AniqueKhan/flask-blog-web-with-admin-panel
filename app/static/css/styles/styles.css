@@ -5,6 +5,8 @@
   right: 50px;
   bottom: 30px;
 }
-.body {
-  background-color: aqua;
+.custom-class {
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  background-color: blue;
 }

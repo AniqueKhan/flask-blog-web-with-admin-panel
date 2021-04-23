@@ -1,5 +1,0 @@
-1) Customize the look of the app
-2) Customize the home/index page
-3) Customize the home page of the admin panel
-4) Add users and roles to the admin panel
-5) Add Tags, Posts , Users ,Roles and check how everything goes.
